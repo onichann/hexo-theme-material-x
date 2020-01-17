@@ -13,7 +13,7 @@ info:
 
 
 ############################### 主题风格 ###############################
-# style: material    # material: 导航栏和标题栏背景是主题色
+#style: material    # material: 导航栏和标题栏背景是主题色
 style: pure        # pure: 导航栏和标题栏背景是白色
 
 
@@ -21,7 +21,7 @@ style: pure        # pure: 导航栏和标题栏背景是白色
 scrollreveal: true
 nodewaves: true
 busuanzi: true
-# fastclick: true
+fastclick: true
 
 
 
@@ -45,7 +45,7 @@ date_format: 'YYYY-MM-DD' # 文章发布日期的格式
 updated_date_format: 'll' # 文章更新日期的格式
 
 # 文章字数统计、阅读时长，默认关闭，开启需要安装插件: npm i --save hexo-wordcount
-word_count: false
+word_count: true
 
 # 幻灯片
 backstretch:
@@ -62,7 +62,7 @@ backstretch:
 cover:
   scheme: search    # 后期将会提供多种封面方案
   height: half      # full（默认值）: 首页封面占据整个第一屏幕，其他页面占半个屏幕高度， half: 所有页面都封面都只占半个屏幕高度
-  title: Demo
+  title: "Jenny Turtle"
   # logo: assets/logo.png    # logo和title只显示一个，若同时设置，则只显示logo
   # search_placeholder: '搜索'
   # 主页封面菜单
@@ -257,7 +257,7 @@ share:
 
 
 footer_post: '<center>这是文章页脚，可以设置打赏图片：<br><fancybox><img src="https://img.vim-cn.com/4a/5f8244a7c6e1e069a781b84ed11008e7955e16.png"></fancybox></center>'
-# footer: '网页页脚文字，支持[markdown](/)'
+#footer: '网页页脚文字，支持[markdown](/)'
 
 
 ############################### 评论系统 ###############################
@@ -313,3 +313,15 @@ search:
 # Less渲染
 less:
   compress: true
+
+
+language:
+  - zh-CN
+  - en
+  - zh-HK
+  - zh-TW
+
+# 网站图标
+favicon: http://img.duoziwang.com/2018/19/07021556710504.jpg
+# 作者头像，会出现在文章标题下方，不同于侧边栏的大头像
+avatar: http://img.duoziwang.com/2018/19/07021556710504.jpg

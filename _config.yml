@@ -28,7 +28,7 @@ fastclick: true
 ############################### 默认值 ###############################
 # 音乐控件的默认配置，如果sidebar或者page里没有提供，就取这里的参数
 music:
-  enable: true      # 是否启用
+  enable: false      # 是否启用
   color: '#1BCDFC'  # 主题色
   mode: circulation # random （随机） single （单曲） circulation （列表循环） order （列表）
   server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
@@ -41,8 +41,8 @@ music:
 avatar_placeholder: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
 
 # 日期格式 http://momentjs.com/docs/
-date_format: 'YYYY-MM-DD' # 文章发布日期的格式
-updated_date_format: 'll' # 文章更新日期的格式
+date_format: 'YYYY-MM-DD HH:mm' # 文章发布日期的格式
+updated_date_format: 'YYYY-MM-DD HH:mm' # 文章更新日期的格式
 
 # 文章字数统计、阅读时长，默认关闭，开启需要安装插件: npm i --save hexo-wordcount
 word_count: true
@@ -132,7 +132,7 @@ layout:
     # 列表中每一篇文章的meta信息
     meta: [title, author, date, categories, wordcount, top]
     # 列表类页面的侧边栏
-    sidebar: [author, plain, list, grid, category, tagcloud]
+    sidebar: [author, grid, category, tagcloud]
   # 文章页面布局
   article:
     # 文章页面主体元素，你也可以在页面的Front-matter中设置
@@ -143,14 +143,14 @@ layout:
     header: [title, author, date, categories, counter, wordcount, top]
     footer: [updated, tags, share]
     # 文章页面的侧边栏
-    sidebar: [author, plain, toc, grid, category, tagcloud, list, related_posts]
+    sidebar: [toc,related_posts]
   # 其他的页面布局暂时等于文章列表
 
 
 # 侧边栏小部件配置
 sidebar:
   - widget: author
-    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
+    avatar: http://img.duoziwang.com/2018/19/07021556710504.jpg
     jinrishici: true
     social: true
   - widget: plain
@@ -195,7 +195,7 @@ sidebar:
       icon: fas fa-expand-arrows-alt
       url: blog/tags/
       rel: nofollow
-  # - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
+  - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
   - widget: music
     icon: fas fa-compact-disc
     title: "最近在听"
@@ -245,15 +245,15 @@ share:
   - id: qzone
     name: QQ空间
     img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png
-  # - id: qrcode
-  #   name: 微信
-  #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
+#  - id: qrcode
+#    name: 微信
+#    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
   - id: weibo
     name: 微博
     img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png
-  # - id: qrcode
-  #   name: QRcode
-  #   img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
+#  - id: qrcode
+#    name: QRcode
+#    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
 
 
 footer_post: '<center>这是文章页脚，可以设置打赏图片：<br><fancybox><img src="https://img.vim-cn.com/4a/5f8244a7c6e1e069a781b84ed11008e7955e16.png"></fancybox></center>'
@@ -315,13 +315,6 @@ less:
   compress: true
 
 
-language:
-  - zh-CN
-  - en
-  - zh-HK
-  - zh-TW
 
-# 网站图标
-favicon: http://img.duoziwang.com/2018/19/07021556710504.jpg
-# 作者头像，会出现在文章标题下方，不同于侧边栏的大头像
-avatar: http://img.duoziwang.com/2018/19/07021556710504.jpg
+
+

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <%- partial('_partial/head') %>
-  <script id="ribbon" src="https://throwable-blog-1256189093.cos.ap-guangzhou.myqcloud.com/js/canvas-ribbon.min.js"></script>
 <body>
   <%
   var showCover = false;
@@ -33,6 +32,10 @@
   </div>
   <%- partial('_partial/scripts') %>
 
+<!--浏览器搞笑标题-->
+ <%- js(['js/FunnyTitle.js']) %>
+<!-- 样式一（鼠标点击更换样式） -->
+<script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>
 
   <script>setLoadingBarProgress(100);</script>
 </body>

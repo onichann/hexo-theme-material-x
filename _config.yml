@@ -70,16 +70,16 @@ cover:
     - name: 主页
       icon: fas fa-home
       url: /
-#    - name: 项目
-#      icon: fas fa-code-branch
-#      url: projects/
+    #    - name: 项目
+    #      icon: fas fa-code-branch
+    #      url: projects/
     - name: 友链
       icon: fas fa-link
       url: friends/
-#      rel: nofollow
-#    - name: 留言板
-#      icon: fas fa-comments
-#      url: board/
+    #      rel: nofollow
+    #    - name: 留言板
+    #      icon: fas fa-comments
+    #      url: board/
     - name: 关于
       icon: fas fa-info-circle
       url: about/
@@ -88,9 +88,9 @@ cover:
 
 # 桌面端导航栏菜单
 menu_desktop:
-#  - name: 示例
-#    icon: fas fa-grin
-#    url: /
+  #  - name: 示例
+  #    icon: fas fa-grin
+  #    url: /
   - name: 分类
     icon: fas fa-folder-open
     url: categories/
@@ -99,10 +99,10 @@ menu_desktop:
     icon: fas fa-hashtag
     url: tags/
     rel: nofollow
-#  - name: 归档
-#    icon: fas fa-archive
-#    url: archives/
-#    rel: nofollow
+  #  - name: 归档
+  #    icon: fas fa-archive
+  #    url: archives/
+  #    rel: nofollow
   - name: 关于
     icon: fas fa-info-circle
     url: about/
@@ -113,21 +113,21 @@ menu_mobile:
   - name: 近期文章
     icon: fas fa-clock
     url: /
-#  - name: 文章归档
-#    icon: fas fa-archive
-#    url: blog/archives/
-#    rel: nofollow
-#  - name: 开源项目
-#    icon: fas fa-code-branch
-#    url: projects/
+  #  - name: 文章归档
+  #    icon: fas fa-archive
+  #    url: blog/archives/
+  #    rel: nofollow
+  #  - name: 开源项目
+  #    icon: fas fa-code-branch
+  #    url: projects/
   - name: 友情链接
     icon: fas fa-link
     url: friends/
     rel: nofollow
-#  - name: 主题文档
-#    icon: fas fa-book
-#    url: https://xaoxuu.com/wiki/material-x/
-#    rel: nofollow
+  #  - name: 主题文档
+  #    icon: fas fa-book
+  #    url: https://xaoxuu.com/wiki/material-x/
+  #    rel: nofollow
   - name: 关于小站
     icon: fas fa-info-circle
     url: about/
@@ -172,21 +172,21 @@ sidebar:
       - name: 近期文章
         icon: fas fa-clock
         url: /
-#      - name: 文章归档
-#        icon: fas fa-archive
-#        url: blog/archives/
-#        rel: nofollow
-#      - name: 开源项目
-#        icon: fas fa-code-branch
-#        url: projects/
+      #      - name: 文章归档
+      #        icon: fas fa-archive
+      #        url: blog/archives/
+      #        rel: nofollow
+      #      - name: 开源项目
+      #        icon: fas fa-code-branch
+      #        url: projects/
       - name: 我的友链
         icon: fas fa-link
         url: friends/
         rel: nofollow
-#      - name: 主题文档
-#        icon: fas fa-book
-#        url: https://xaoxuu.com/wiki/material-x/
-#        rel: nofollow
+      #      - name: 主题文档
+      #        icon: fas fa-book
+      #        url: https://xaoxuu.com/wiki/material-x/
+      #        rel: nofollow
       - name: 关于
         icon: fas fa-info-circle
         url: about/
@@ -233,8 +233,8 @@ sidebar:
 
 # 社交信息
 social:
-#  - icon: fas fa-rss
-#    url: atom.xml
+  #  - icon: fas fa-rss
+  #    url: atom.xml
   - icon: fas fa-envelope fa-lg
     url: mailto:wt01278@163.com
   - icon: fab fa-github fa-lg
@@ -252,9 +252,9 @@ share:
   - id: qzone
     name: QQ空间
     img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png
-#  - id: qrcode
-#    name: 微信
-#    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
+  #  - id: qrcode
+  #    name: 微信
+  #    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
   - id: weibo
     name: 微博
     img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png

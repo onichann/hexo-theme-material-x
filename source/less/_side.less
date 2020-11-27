@@ -4,17 +4,17 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  @media(max-width: @on_desktop) {
+  @media (max-width: @on_desktop) {
     width: @width_sidebar_m;
   }
-  @media(max-width: @on_pad) {
+  @media (max-width: @on_pad) {
     // margin: @gap 0 0;
     width: 100%;
   }
 
 }
 
-.widget{
+.widget {
   z-index: 0;
   &:extend(.z-depth-main);
   background: @theme_cardbg;
@@ -24,21 +24,24 @@
 
   border-radius: @border_radius;
   .enable-trans();
+
   &:hover {
     box-shadow: @boxshadow_card_raised;
   }
+
   &:active {
     box-shadow: @boxshadow_card_normal;
   }
 
   width: 100%;
 
-  @media(max-width: @on_phone) {
+  @media (max-width: @on_phone) {
     width: ~"calc(100% - 2 * @{gap})";
     margin: @gap @gap 0 @gap;
   }
   max-height: ~"calc(100% - @{height_navbar} - 4 * @{gap})";
-  header{
+
+  header {
     display: flex;
     justify-content: space-between;
     border-top-left-radius: @border_radius;
@@ -48,34 +51,41 @@
     font-weight: bold;
     line-height: 1.5em;
     padding: 8px @gap;
-    .rightBtn{
+
+    .rightBtn {
       color: @color_text_in_header;
+
       &:hover {
         color: darken(@theme_main, 25%);
-        &.rotate90{
+
+        &.rotate90 {
           transform: rotate(90deg);
         }
       }
     }
-    &.pure{
+
+    &.pure {
       background-color: @theme_cardbg;
       color: @theme_main;
       padding-top: 14px; // 适合白色导航栏背景
       padding-bottom: 14px; // 适合白色导航栏背景
-      .rightBtn{
+      .rightBtn {
         color: @theme_main;
+
         &:hover {
           color: darken(@theme_main, 25%);
         }
       }
     }
   }
-  .content{
+
+  .content {
     text-align: justify;
     padding: @gap/2;
     max-height: ~"calc(100% - @{height_navbar} - 12.5 * @{gap})";
-    ul > li{
-      a{
+
+    ul > li {
+      a {
         color: fade(@color_text_main, 80%);
         padding: 0 @gap;
         line-height: @height_cell;
@@ -86,27 +96,32 @@
         .enable-trans();
       }
     }
-    ul.entry, ul.popular-posts{
-      a{
-        .name{
-          flex:auto;
+
+    ul.entry, ul.popular-posts {
+      a {
+        .name {
+          flex: auto;
           &:extend(.txt-ellipsis);
           color: fade(@color_text_main, 80%);
         }
-        .badge{
-          flex:none;
+
+        .badge {
+          flex: none;
           font-weight: normal;
           font-size: @fontsize_small;
           color: fade(@color_text_main, 70%);
         }
-        &:hover{
+
+        &:hover {
           border-left: 4px solid @theme_main;
           background: fade(@theme_main, 10%);
         }
-        &:active{
+
+        &:active {
           border-left: 8px solid @theme_main;
         }
-        &.child{
+
+        &.child {
           padding-left: @gap*2;
         }
       }
@@ -114,15 +129,18 @@
   }
 
 
-  &.author{
+  &.author {
     .enable-trans();
-    .content{
+
+    .content {
       padding: 0;
-      div.avatar{
+
+      div.avatar {
         display: flex;
         justify-content: center;
       }
-      img{
+
+      img {
         padding: 0;
         margin: 0;
         display: flex;
@@ -131,11 +149,11 @@
         height: @width_sidebar;
         border-top-left-radius: @border_radius;
         border-top-right-radius: @border_radius;
-        @media(max-width: @on_desktop) {
+        @media (max-width: @on_desktop) {
           width: @width_sidebar_m;
           height: @width_sidebar_m;
         }
-        @media(max-width: @on_pad){
+        @media (max-width: @on_pad) {
           width: 96px;
           height: 96px;
           border-radius: 100%;
@@ -144,33 +162,39 @@
         }
 
       }
-      h2{
+
+      h2 {
         text-align: center;
         font-weight: bold;
         margin: @gap/2;
-        @media(max-width: @on_pad){
+        @media (max-width: @on_pad) {
           margin: @gap/2;
         }
       }
-      p{
+
+      p {
         font-size: @fontsize_base;
         font-weight: bold;
         text-align: center;
         margin: @gap/2 @gap/2 0 @gap/2;
         empty-cells: hide;
       }
-      .social-wrapper{
+
+      .social-wrapper {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin: 4px @gap/2;
-        a{
+
+        a {
           color: fade(@color_text_main, 70%);
           padding: 0;
           .enable-trans();
-          &:hover{
+
+          &:hover {
             color: @color_text_highlight;
           }
+
           &.social {
             display: flex;
             justify-content: center;
@@ -179,42 +203,49 @@
             height: 32px;
             margin: 4px;
             border-radius: 100px;
+
             &:hover {
               background: fade(@theme_main, 10%);
               color: @theme_main;
             }
           }
         }
-        @media(max-width: @on_pad){
+
+        @media (max-width: @on_pad) {
           justify-content: center;
           display: none;
         }
       }
     }
-    @media(max-width: @on_pad){
+
+    @media (max-width: @on_pad) {
       box-shadow: none;
       background: @theme_background;
       margin-top: 2*@gap;
     }
   }
 
-  &.plain{
-    .content{
+  &.plain {
+    .content {
       font-size: @fontsize_small;
       font-weight: bold;
       word-break: break-all;
       padding: @gap/2 @gap;
       line-height: @fontsize_small + 8px;
-      &.pure{
+
+      &.pure {
         padding: 0 @gap @gap @gap; // 适合白色导航栏背景
       }
-      a{
+
+      a {
         color: @color_text_link;
         .enable-trans();
+
         &:hover {
           color: @color_text_highlight;
           text-decoration: underline;
         }
+
         &:active {
           color: darken(@color_text_highlight, 25%);
         }
@@ -222,49 +253,59 @@
     }
   }
 
-  &.list{
-    .content{
+  &.list {
+    .content {
       padding: @gap/2 0;
-      &.pure{
+
+      &.pure {
         padding-top: 0; // 适合白色导航栏背景
       }
-      a{
+
+      a {
         font-size: @fontsize_small;
         font-weight: bold;
-        &:hover{
+
+        &:hover {
           text-decoration: none;
         }
-        i{
-          color: fade(@color_text_main,70%);
+
+        i {
+          color: fade(@color_text_main, 70%);
           line-height: @height_cell;
           margin-right: 3px;
         }
-        img{
+
+        img {
           display: inline;
           vertical-align: middle;
           height: 18px;
           width: 18px;
           margin-bottom: 4px;
-          &#round{
+
+          &#round {
             border-radius: 100%;
           }
         }
       }
     }
   }
-  &.grid{
-    .content{
+
+  &.grid {
+    .content {
       padding: @gap/2 0;
-      &.pure{
+
+      &.pure {
         padding-top: 0; // 适合白色导航栏背景
       }
-      ul.grid{
+
+      ul.grid {
         border: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 0 @gap;
-        a{
+
+        a {
           text-align: center;
           border-radius: @border_radius;
           margin: 4px 0;
@@ -276,28 +317,35 @@
           font-weight: bold;
           line-height: @fontsize_small * 1.3;
           color: fade(@color_text_main, 70%);
-          i{
+
+          i {
             margin-top: .3em;
             margin-bottom: .3em;
             font-size: 1.8em;
           }
-          img{
+
+          img {
             display: inline;
             vertical-align: middle;
             margin-bottom: 4px;
-            &#round{
+
+            &#round {
               border-radius: 100%;
             }
           }
+
           border: 1px solid transparent;
+
           &:hover {
             color: @theme_main;
             background: fade(@theme_main, 10%);
             border-radius: 4px;
           }
+
           &:active {
             color: @theme_main;
           }
+
           &.active {
             color: @theme_main;
             border: 1px solid @theme_main;
@@ -306,29 +354,34 @@
       }
     }
   }
-  &.category{
-    .content{
+
+  &.category {
+    .content {
       padding: @gap/2 0;
       font-size: @fontsize_small;
       font-weight: bold;
-      &.pure{
+
+      &.pure {
         padding-top: 0; // 适合白色导航栏背景
       }
     }
   }
 
-  &.tagcloud{
-    .content{
+  &.tagcloud {
+    .content {
       text-align: justify;
       padding: @gap/2 @gap;
-      &.pure{
+
+      &.pure {
         padding: 0 @gap @gap @gap; // 适合白色导航栏背景
       }
-      a{
-        display:inline-block;
+
+      a {
+        display: inline-block;
         .enable-trans(.1s);
         line-height: 1.6em;
-        &:hover{
+
+        &:hover {
           color: @color_text_highlight !important; //to cover inline style.
           text-decoration: underline
         }
@@ -336,19 +389,22 @@
     }
   }
 
-  &.music{
-    header{
-      &.pure{
+  &.music {
+    header {
+      &.pure {
         padding-bottom: @gap/4; // 适合白色导航栏背景
       }
     }
-    .content{
+
+    .content {
       padding: @gap/2+4px;
       padding-top: @gap/2;
-      &.pure{
+
+      &.pure {
         padding-top: @gap/4; // 适合白色导航栏背景
       }
-      .aplayer{
+
+      .aplayer {
         border-radius: 4px;
         color: #666;
         font-family: @fontfamily_base;
@@ -356,19 +412,22 @@
     }
   }
 
-  &.related_posts{
-    .content{
+  &.related_posts {
+    .content {
       padding: @gap/2 0;
       font-size: @fontsize_small;
       font-weight: bold;
-      &.pure{
+
+      &.pure {
         padding-top: 0; // 适合白色导航栏背景
       }
-      h3{
+
+      h3 {
         font-size: @fontsize_small;
         font-weight: bold;
         margin: 0;
-        a{
+
+        a {
           // line-height: @fontsize_small*1.7;
           line-height: inherit;
           padding-top: 4px;

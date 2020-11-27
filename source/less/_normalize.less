@@ -422,20 +422,24 @@ optgroup {
 table {
   border-collapse: collapse;
   width: 100%;
+
   th {
     background-color: lighten(@theme_background, 1%);
   }
+
   td,
   th {
     text-align: justify;
     padding: 4px 8px;
     border: 1px solid @theme_background;
   }
+
   tr {
     // border-bottom: 2px solid #eee;
     // background-color: @theme_main;
   }
-  &>thead>th {
+
+  & > thead > th {
     // border-bottom-width: 2px;
   }
 }
